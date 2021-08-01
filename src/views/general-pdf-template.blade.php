@@ -133,7 +133,7 @@
 		    		$__env = isset($__env) ? $__env : null;
 					?>
                  
-                    @foreach($query->when($limit, function($qry) use($limit) { $qry->take($limit); })->cursor() as $result)
+                    @foreach($query as $result)
 
 						<?php
 							if ($limit != null && $ctr == $limit + 1) return false;
